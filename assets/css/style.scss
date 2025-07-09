@@ -8,6 +8,13 @@ $pale_white: #ECF2F8;
 $pale_black: #212326;
 $eerie_black: #1C1E21;
 
+@font-face {
+      font-family: "Ubuntu";
+      src: url("{{ site.url }}/assets/fonts/Ubuntu.ttf") format("ttf");
+      font-weight: normal;
+      font-style: normal;
+    }
+
 body {
   background: $pale_black;
   color: $pale_white;
