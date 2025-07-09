@@ -1,0 +1,13 @@
+---
+---
+@import "{{ site.theme }}"; 
+
+$lavender: #CEA5FB;
+$salmon: #FA7970;
+$pale_white: #ECF2F8;
+$pale_black: #21262D;
+
+body {
+  background: $pale_black;
+  color: $pale_white;
+}
