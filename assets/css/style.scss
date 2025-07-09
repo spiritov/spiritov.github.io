@@ -1,6 +1,5 @@
 ---
 ---
-@import "{{ site.theme }}"; 
 
 $lavender: #CEA5FB;
 $salmon: #FA7970;
@@ -10,7 +9,7 @@ $eerie_black: #1C1E21;
 
 @font-face {
       font-family: "Ubuntu";
-      src: url("{{ site.url }}/assets/fonts/Ubuntu.ttf") format("ttf");
+      src: url("https://spiritov.github.io/assets/fonts/Ubuntu.ttf") format("ttf");
       font-weight: normal;
       font-style: normal;
     }
