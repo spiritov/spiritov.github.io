@@ -6,6 +6,7 @@ $lavender: #CEA5FB;
 $salmon: #FA7970;
 $pale_white: #ECF2F8;
 $pale_black: #212326;
+$eerie_black: #1C1E21;
 
 body {
   background: $pale_black;
@@ -23,4 +24,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
 
 a {
   color: $lavender;
+}
+
+pre {
+  background-color: $eerie_black;
 }
