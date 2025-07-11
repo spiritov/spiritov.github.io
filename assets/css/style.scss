@@ -64,8 +64,9 @@ li::marker {
   color: $lavender;
 }
 
-pre {
+.markdown-body .highlight pre, .markdown-body pre {
   background: $eerie_black;
+  background-color: $eerie_black;
   color: $lavender;
 
   .highlight {
