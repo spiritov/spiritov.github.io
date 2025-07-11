@@ -2,13 +2,18 @@
 title:  "test post"
 date:   2025-07-11 5:00:00 -0700
 ---
+<header>
+a <a href="{{ site.url }}">home</a> for <a href="{{ site.github.url }}">stuff</a> 
+</header>
 
-{{ page.title }} but probably not
-{{ page.date }} maybe
+{{ page.title }}
 
+{{ page.date }}
 ## just a test post
-
-and some stuff below
+### header 3
+#### header 4?
+##### i doubt it
+###### no way
 
 ```js
 const thing = {prop: 't', propp: 'u'};
