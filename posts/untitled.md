@@ -19,6 +19,8 @@ a <a href="{{ site.url }}">home</a> for <a href="{{ site.github.url }}">stuff</a
 const thing = {prop: 't', propp: 'u'};
 ```
 
+`stuff in` a little `inline block` and some more [`words`]({{ site.url }})
+
 - more highlighting
 - 
 
