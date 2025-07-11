@@ -34,14 +34,15 @@ body {
   color: $pale_white;
   font-family: "Ubuntu";
 
-  .date {
-  color: $subtle;
-  font-size: 0.85em;
-  }
-
   .title {
   color: $salmon;
   font-size: 1.5em;
+  line-height: 1.25;
+  }
+
+  .date {
+  color: $subtle;
+  font-size: 0.85em;
   }
 }
 
@@ -55,4 +56,9 @@ a {
 
 pre {
   background-color: $eerie_black;
+}
+
+::selection {
+	background-color: $lavender;
+	color: $pale_black;
 }
