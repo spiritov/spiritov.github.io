@@ -1,13 +1,13 @@
 ---
 title:  "test post"
-date:   2025-07-11
+date:   "July 11, 2025"
 ---
 <header>
 a <a href="{{ site.url }}">home</a> for <a href="{{ site.github.url }}">stuff</a> 
 </header>
 
-<span class="date">{{ page.date }}</span>  
-<span class="title">{{ page.title }}</span>
+<span class="title">{{ page.title }}</span>  
+<span class="date">{{ page.date }}</span>
 
 ## just a test post
 ### header 3
