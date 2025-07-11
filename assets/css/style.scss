@@ -2,7 +2,6 @@
 ---
 
 @import "{{ site.theme }}";
-
 $lavender: #CEA5FB;
 $salmon: #FA7970;
 $pale_white: #ECF2F8;
@@ -15,6 +14,10 @@ $eerie_black: #1C1E21;
       font-weight: normal;
       font-style: normal;
     }
+
+header {
+  display: none;
+}
 
 body {
   background: $pale_black;
