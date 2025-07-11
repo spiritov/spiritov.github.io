@@ -30,10 +30,6 @@ h1 {
 }
 
 body {
-  .highlight {
-  background-color: $eerie_black;
-  }
-
   background: $pale_black;
   color: $pale_white;
   font-family: "Ubuntu";
@@ -58,10 +54,6 @@ a {
   color: $lavender;
 }
 
-.highlight {
-  background-color: $eerie_black;
-}
-
 ::selection {
 	background-color: $lavender;
 	color: $pale_black;
@@ -69,5 +61,10 @@ a {
 
 li::marker {
   content: "> ";
+  color: $lavender;
+}
+
+pre {
+  background: $eerie_black;
   color: $lavender;
 }

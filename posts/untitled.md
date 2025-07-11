@@ -1,6 +1,5 @@
 ---
 title:  "test post"
-date:   "July 11, 2025"
 ---
 <header>
 a <a href="{{ site.url }}">home</a> for <a href="{{ site.github.url }}">stuff</a> 
