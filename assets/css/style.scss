@@ -30,6 +30,10 @@ h1 {
 }
 
 body {
+  .highlight {
+  background-color: $eerie_black;
+  }
+
   background: $pale_black;
   color: $pale_white;
   font-family: "Ubuntu";
