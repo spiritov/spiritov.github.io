@@ -34,6 +34,10 @@ body {
   color: $pale_white;
   font-family: "Ubuntu";
 
+  pre {
+  background-color: $eerie_black;
+  }
+
   .title {
   color: $salmon;
   font-size: 1.5em;
@@ -54,11 +58,12 @@ a {
   color: $lavender;
 }
 
-pre {
-  background-color: $eerie_black;
-}
-
 ::selection {
 	background-color: $lavender;
 	color: $pale_black;
+}
+
+li::marker {
+  content: "- ";
+  color: $lavender;
 }
