@@ -2,11 +2,13 @@
 ---
 
 @import "{{ site.theme }}";
+
 $lavender: #CEA5FB;
 $salmon: #FA7970;
 $pale_white: #ECF2F8;
 $pale_black: #212326;
 $eerie_black: #1C1E21;
+$subtle: #6A737D;
 
 @font-face {
       font-family: "Ubuntu";
@@ -16,7 +18,11 @@ $eerie_black: #1C1E21;
     }
 
 header {
-  font-size: 28px;
+  font-size: 1.75em;
+  border-bottom: 2px dashed $lavender;
+  width: max-content;
+  padding-right: 20px;
+  margin-bottom: 48px;
 }
 
 h1 {
@@ -27,6 +33,16 @@ body {
   background: $pale_black;
   color: $pale_white;
   font-family: "Ubuntu";
+
+  .date {
+  color: $subtle;
+  font-size: 0.85em;
+  }
+
+  .title {
+  color: $salmon;
+  font-size: 1.5em;
+  }
 }
 
 h2, h3, h4, h5, h6, p, ul, li {
