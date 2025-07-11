@@ -64,13 +64,17 @@ li::marker {
   color: $lavender;
 }
 
-.markdown-body .highlight pre, .markdown-body pre {
-  background: $eerie_black;
-  background-color: $eerie_black;
+pre {
   color: $lavender;
-
-  .highlight {
-    background: $eerie_black;
-    background-color: $eerie_black;
-  }
 }
+
+//.markdown-body .highlight pre, .markdown-body pre {
+//  background: $eerie_black;
+//  background-color: $eerie_black;
+//  color: $lavender;
+//
+//  .highlight {
+//    background: $eerie_black;
+//    background-color: $eerie_black;
+//  }
+//}
