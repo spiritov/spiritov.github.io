@@ -6,8 +6,8 @@ date:   2025-07-11
 a <a href="{{ site.url }}">home</a> for <a href="{{ site.github.url }}">stuff</a> 
 </header>
 
-<span id="date">{{ page.date }}</span>
-<span id="title">{{ page.title }}</span>
+<span class="date">{{ page.date }}</span>
+<span class="title">{{ page.title }}</span>
 
 ## just a test post
 ### header 3
