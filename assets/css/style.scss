@@ -67,4 +67,9 @@ li::marker {
 pre {
   background: $eerie_black;
   color: $lavender;
+
+  .highlight {
+    background: $eerie_black;
+    background-color: $eerie_black;
+  }
 }
