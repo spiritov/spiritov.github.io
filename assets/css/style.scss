@@ -1,0 +1,77 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+$lavender: #CEA5FB;
+$salmon: #FA7970;
+$pale_white: #ECF2F8;
+$pale_black: #212326;
+$eerie_black: #1C1E21;
+$subtle: #6A737D;
+
+@font-face {
+      font-family: "Ubuntu";
+      src: url("https://spiritov.github.io/assets/fonts/Ubuntu.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+header {
+  font-size: 1.75em;
+  border-bottom: 2px dashed $lavender;
+  width: max-content;
+  padding-right: 20px;
+  margin-bottom: 48px;
+}
+
+h1 {
+  display: none;
+}
+
+body {
+  background: $pale_black;
+  color: $pale_white;
+  font-family: "Ubuntu";
+
+  .title {
+  color: $salmon;
+  font-size: 1.5em;
+  line-height: 1.25;
+  }
+
+  .date {
+  color: $subtle;
+  font-size: 0.85em;
+  }
+}
+
+h2, h3, h4, h5, h6, p, ul, li {
+  font-family: "Ubuntu";
+}
+
+.markdown-body h2 {
+  border-bottom: thin solid $subtle;
+}
+
+.markdown-body code {
+  background-color: black;
+}
+
+a {
+  color: $lavender;
+}
+
+::selection {
+	background-color: $lavender;
+	color: $pale_black;
+}
+
+li::marker {
+  content: "> ";
+  color: $lavender;
+}
+
+pre {
+  color: $lavender;
+}
