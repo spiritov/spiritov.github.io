@@ -17,6 +17,13 @@ $subtle: #6A737D;
       font-style: normal;
     }
 
+@font-face {
+      font-family: "UbuntuMono";
+      src: url("https://spiritov.github.io/assets/fonts/UbuntuMono.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+
 header {
   font-size: 1.75em;
   border-bottom: 2px dashed $lavender;
@@ -60,6 +67,7 @@ h2 {
 
 .markdown-body code {
   background-color: black;
+  font-family: "UbuntuMono";
 }
 
 a {
