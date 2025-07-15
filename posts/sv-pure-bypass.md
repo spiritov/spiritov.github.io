@@ -18,7 +18,7 @@ I've reached out via email to two Valve employees known to actively contribute t
 ## An overview
 [`sv_pure 2`](https://developer.valvesoftware.com/wiki/Pure_Servers) doesn't allow stuff like custom sounds, models, materials, particles, etc. Additionally, the .vmt `$ignorez` shader parameter is [disabled for models only](https://developer.valvesoftware.com/wiki/$ignorez), and prints a console error message saying it was ignored.
 
-In `/tf/gameinfo.txt`, replacing `type multiplayer_only` with `type singleplayer_only` appears to bypass both the `sv_pure` rules and the `$ignorez` safeguard, with no console message. Playermodel .vmt and .vtf files are no exception, enabling VAC-Safe wallhacks, playermodel included. All servers are affected, no matter the `sv_pure` value. Here's a video example from a sample [demos.tf](https://demos.tf/) demo:
+In `/tf/gameinfo.txt`, replacing `type multiplayer_only` with `type singleplayer_only` appears to bypass both the `sv_pure` rules **and** the `$ignorez` safeguard, with no console message. Playermodel .vmt and .vtf files are no exception, enabling VAC-Safe wallhacks, playermodel included. All servers are affected, no matter the `sv_pure` value. Here's a video example from a sample [demos.tf](https://demos.tf/) demo:
 
 <video controls width="640" height="360">
   <source src="../assets/media/wallhacks-demo.mp4" type="video/mp4">
