@@ -75,7 +75,7 @@ The root cause for this is most likely in the closed-source Source Engine, not t
 - June 3, 2025 - exploit report emailed to TF Team  
 - July 14, 2025 - exploit released publicly
 
-> huge thanks to siyo at [Fireside Casts](https://x.com/FiresideCasts) for getting in touch with competitive league heads before release
+> huge thanks to siyo at [Fireside Casts](https://x.com/FiresideCasts) for getting in touch with competitive league heads before public release
 
 ## Misc. Resources
 - [VPKEdit](https://github.com/craftablescience/VPKEdit)
