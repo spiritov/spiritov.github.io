@@ -10,8 +10,7 @@ a <a href="{{ site.url }}">home</a> for <a href="{{ site.github.url }}">stuff</a
 <span class="title">VAC-Safe Wallhacks, or an `sv_pure` and .vmt `$ignorez` bypass</span>  
 <span class="date">{{ page.date }}</span>
 
-## VAC-Safe Wallhacks, or an `sv_pure` and .vmt `$ignorez` parameter bypass
-![mpv-shot0001](https://gist.github.com/user-attachments/assets/9413eff2-7a3c-4d62-be7e-1ca22b6f6450)
+![wallhacks-image](../assets/media/wallhacks-image.jpg)
 
 ### Why is this public?
 I've reached out via email to two Valve employees known to actively contribute to TF2, and the TF Team, but haven't heard back since my initial email on April 20, 2025 (85 days before making this public). I disclosed in my email to the TF Team when I would make this exploit public, to raise awareness and hopefully prioritize creating a fix, and / or make it easier to come up with a community fix in the meantime.
@@ -23,7 +22,9 @@ In `/tf/gameinfo.txt`, replacing `type multiplayer_only` with `type singleplayer
 
 Additionally, the .vmt `$ignorez` shader parameter is [disabled for models only](https://developer.valvesoftware.com/wiki/$ignorez), and prints a console error message saying it was ignored. `type singleplayer_only` bypasses this safeguard as well (and the console message), enabling VAC-Safe wallhacks, playermodel included. Here's a video example from a sample [demos.tf](https://demos.tf/) demo:
 
-https://gist.github.com/user-attachments/assets/c89d49c1-0ddf-4471-adfb-f8a955f9e4c2
+<video controls width="640" height="360">
+  <source src="../assets/media/wallhacks-demo.mp4" type="video/mp4">
+</video>
 
 This may also be present in other Source games (aside from CS:GO (see below) and CS2), though I've only tested TF2. CS2 is already `singleplayer_only` within [`gameinfo.gi`](https://developer.valvesoftware.com/wiki/Gameinfo.gi) by default, likely because the option makes no difference(?) there, or only has one mode.
 
@@ -49,10 +50,10 @@ This example enables wallhacks on the default RED Scout playermodel, on a fresh 
 - navigate towards RED spawn, on the last control point.
 > Upon approaching spawn doors, you should be able to view the red scout's model through the wall.
 > 
-> <img width="1919" height="1079" alt="image" src="https://gist.github.com/user-attachments/assets/35a0c086-4519-4ac0-8523-59a7f407bb6f" />
+> ![image](../assets/media/wallhacks-reproduce.jpg)
 
 
-https://www.youtube.com/watch?v=hd4N-xtSuCo  
+[https://www.youtube.com/watch?v=hd4N-xtSuCo](https://www.youtube.com/watch?v=hd4N-xtSuCo)  
 [test-materials.vpk](https://files.catbox.moe/edlvrv.vpk) (catbox renames files)
 
 ### Removal
@@ -66,7 +67,7 @@ In console, the output from running `trackerlistallfiles` can differentiate betw
 ### Possible fixes for Valve
 The root cause for this is most likely in the closed-source Source Engine, not the SDK. That said, another possible fix is for Valve to add a .sig file for `gameinfo.txt`, which was done for `items_game.txt` [in 2014](https://www.teamfortress.com/post.php?id=14678). With that update, an engine error became presented if a bad `items_game.txt` was found.
 
-<img width="407" height="165" alt="image" src="https://gist.github.com/user-attachments/assets/e9defb50-d9e0-41d8-8c7e-144a69fc49b6" />
+![image](../assets/media/wallhacks-engine-error.jpg)
 
 
 ### Timeline
