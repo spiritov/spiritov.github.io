@@ -50,6 +50,10 @@ h2, h3, h4, h5, h6, p, ul, li {
   font-family: "Ubuntu";
 }
 
+h2 {
+  color: $lavender;
+}
+
 .markdown-body h2 {
   border-bottom: thin solid $subtle;
 }
