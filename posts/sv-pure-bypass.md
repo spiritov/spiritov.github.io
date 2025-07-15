@@ -16,12 +16,6 @@ a <a href="{{ site.url }}">home</a> for <a href="{{ site.github.url }}">stuff</a
 I've reached out via email to two Valve employees known to actively contribute to TF2, and the TF Team, but haven't heard back since my initial email on April 20, 2025 (85 days before making this public). I disclosed in my email to the TF Team when I would make this exploit public, to raise awareness and hopefully prioritize creating a fix, and / or make it easier to come up with a community fix in the meantime.
 
 ## An overview
-
-###supplementary info:
-- [sv_pure](https://developer.valvesoftware.com/wiki/Pure_Servers)
-- [shader parameters](https://developer.valvesoftware.com/wiki/Category:Shader_parameters)
-- [gameinfo.txt](https://developer.valvesoftware.com/wiki/Gameinfo.txt)
-
 [`sv_pure 2`](https://developer.valvesoftware.com/wiki/Pure_Servers) doesn't allow stuff like custom sounds, models, materials, particles, etc. Additionally, the .vmt `$ignorez` shader parameter is [disabled for models only](https://developer.valvesoftware.com/wiki/$ignorez), and prints a console error message saying it was ignored.
 
 In `/tf/gameinfo.txt`, replacing `type multiplayer_only` with `type singleplayer_only` appears to bypass both the `sv_pure` rules and the `$ignorez` safeguard, with no console message. Playermodel .vmt and .vtf files are no exception, enabling VAC-Safe wallhacks, playermodel included. All servers are affected, no matter the `sv_pure` value. Here's a video example from a sample [demos.tf](https://demos.tf/) demo:
