@@ -16,17 +16,21 @@ a <a href="{{ site.url }}">home</a> for <a href="{{ site.github.url }}">stuff</a
 I've reached out via email to two Valve employees known to actively contribute to TF2, and the TF Team, but haven't heard back since my initial email on April 20, 2025 (85 days before making this public). I disclosed in my email to the TF Team when I would make this exploit public, to raise awareness and hopefully prioritize creating a fix, and / or make it easier to come up with a community fix in the meantime.
 
 ## An overview
-[`sv_pure 2`](https://developer.valvesoftware.com/wiki/Pure_Servers) doesn't allow stuff like custom sounds, models, materials, particles, etc. Some files can be "preloaded", but this tends not to be an issue with assets that would break competitive integrity.
 
-In `/tf/gameinfo.txt`, replacing `type multiplayer_only` with `type singleplayer_only` appears to bypass this, or at least a lot of it. Player model .vmt and .vtf files are no exception. All servers are affected, no matter the `sv_pure` value.
+###supplementary info:
+- [sv_pure](https://developer.valvesoftware.com/wiki/Pure_Servers)
+- [shader parameters](https://developer.valvesoftware.com/wiki/Category:Shader_parameters)
+- [gameinfo.txt](https://developer.valvesoftware.com/wiki/Gameinfo.txt)
 
-Additionally, the .vmt `$ignorez` shader parameter is [disabled for models only](https://developer.valvesoftware.com/wiki/$ignorez), and prints a console error message saying it was ignored. `type singleplayer_only` bypasses this safeguard as well (and the console message), enabling VAC-Safe wallhacks, playermodel included. Here's a video example from a sample [demos.tf](https://demos.tf/) demo:
+[`sv_pure 2`](https://developer.valvesoftware.com/wiki/Pure_Servers) doesn't allow stuff like custom sounds, models, materials, particles, etc. Additionally, the .vmt `$ignorez` shader parameter is [disabled for models only](https://developer.valvesoftware.com/wiki/$ignorez), and prints a console error message saying it was ignored.
+
+In `/tf/gameinfo.txt`, replacing `type multiplayer_only` with `type singleplayer_only` appears to bypass both the `sv_pure` rules and the `$ignorez` safeguard, with no console message. Playermodel .vmt and .vtf files are no exception, enabling VAC-Safe wallhacks, playermodel included. All servers are affected, no matter the `sv_pure` value. Here's a video example from a sample [demos.tf](https://demos.tf/) demo:
 
 <video controls width="640" height="360">
   <source src="../assets/media/wallhacks-demo.mp4" type="video/mp4">
 </video>
 
-This may also be present in other Source games (aside from CS:GO (see below) and CS2), though I've only tested TF2. CS2 is already `singleplayer_only` within [`gameinfo.gi`](https://developer.valvesoftware.com/wiki/Gameinfo.gi) by default, likely because the option makes no difference(?) there, or only has one mode.
+> Note: This may also be present in other Source games (aside from CS:GO (see below) and CS2), though I've only tested TF2. CS2 is already `singleplayer_only` within [`gameinfo.gi`](https://developer.valvesoftware.com/wiki/Gameinfo.gi) by default, likely because the option makes no difference(?) there, or only has one mode.
 
 ## Discovery
 I'm not the first by any means to discover this exploit, at least for everything not involving `$ignorez`. The earliest mention I could find is from [a more thorough explanation in CS:GO](https://github.com/kkthxbye-code/csgo_bugs/blob/master/sv_pure_bypass_6/README.md) dating back to 2020, which looks to be really similar (if not the same). It was also reportedly [patched by Valve](https://blog.counter-strike.net/2020/09/31532/) not long after. cueki notes the bypass [has been widely known since 2018-2019](https://github.com/sv-pure-stuff/casual-pre-loader?tab=readme-ov-file#how-does-this-work). I'd recommend taking her words with a grain of salt, given her history of using [wallhacks to disrupt competitive PUGs](https://www.teamfortress.tv/63649/omg-3).
