@@ -67,7 +67,6 @@ The root cause for this is most likely in the closed-source Source Engine, not t
 
 ![image](../assets/media/wallhacks-engine-error.jpg)
 
-
 ## Timeline
 - October 1, 2024 - discovered how the exploit could be used for wallhacks  
 - April 20, 2025 - exploit report emailed to Valve employee  
